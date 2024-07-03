@@ -17,11 +17,21 @@ const dayOfWeekName = daysOfWeek[dayOfWeekNumber];
 currentDay.innerHTML = (dayOfWeekName);
 
 function navSlide(){
-    const burger = document.querySelector('#menu-btn');
+    const burger = document.getElementById('menu-btn');
     const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('.nav-link');
 
     burger.addEventListener('click',()=>{
         nav.classList.toggle('nav-active')
     });
+
+   
+    navLinks.forEach(link =>{
+        link.addEventListener('click',()=>{
+            nav.classList.remove('nav-active')
+        });
+    })
+
+    nav
 }   
  navSlide();

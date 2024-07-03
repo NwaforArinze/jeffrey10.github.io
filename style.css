@@ -6,8 +6,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: sans-serif;
-    /* kanit */
+    font-family: kanit, sans-serif;
 }
 :root {
     --bg-color: #262935;
@@ -76,12 +75,10 @@ section {
     font-weight: 800;
 }
 [data-testid="currentDay"]{
-    text-align: start;
+    text-align: end;
     font-size: 18px;
     color: var(--text-color);
     padding: 0 9%;
-    position: absolute;
-    bottom: 84%;
     font-weight: 800;
 }
 #home {
@@ -358,6 +355,9 @@ footer{
     section{
         padding: 2rem;
     }
+    #home {
+        flex-direction: column-reverse;
+    }
 
 }
 
@@ -366,30 +366,27 @@ footer{
     #menu-btn{
         display: block;
     }
-
     nav {
         position: absolute;
         top: 11vh;
         right: 0;
         background-color: var(--primary-color);
-        height: 57vh;
+        height: 90vh;
         flex-direction: column;
         width: 60%;
         transform: translateX(100%);
         transition: 0.2s ease-in-out;
         z-index: 100;
-        border-bottom: 2px solid white;
     }
-
     nav a{
         font-size: 22px;
-        border-bottom: 1px solid white;
         width: 100%;
         text-align: center;
-        padding: 8.8rem 0;
     }
     [data-testid="currentDay"]{
-        display: none;
+        padding-bottom: 10px;
+        padding-top: 0;
+        margin-top: -50px;
     }
     #home {
         flex-direction: column-reverse;
@@ -444,6 +441,12 @@ footer{
     }
     .footer-content{
         flex-direction: column;
+    }
+    .footer-item1{
+        padding-bottom: 5rem;
+    }
+    footer .links{
+        padding-bottom: 5rem;
     }
 }
 
